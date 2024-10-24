@@ -3,6 +3,6 @@ self.addEventListener("install", function(event) {
 });
 
 self.addEventListener("activate", function(event) {
-    console.log("Service Worker installing...", event);
-    return self.client.claim();
-})
+    console.log("Service Worker activating...", event);
+    return self.clients.claim();
+});
